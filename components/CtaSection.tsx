@@ -25,7 +25,7 @@ export default function CtaSection () {
   return (
     <section
       id='contact'
-      className='relative overflow-hidden bg-[#F7F7F7] py-32 scroll-mt-20'
+      className='relative bg-white py-42 scroll-mt-32 border-none!'
     >
       {/* Watermark */}
       <div className='absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden'>
@@ -63,7 +63,7 @@ export default function CtaSection () {
               type='email'
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder='Enter your email'
+              placeholder='hello@skyehub.tech'
               className='flex-1 px-5 py-3 text-sm text-[#777] bg-transparent outline-none'
             />
 

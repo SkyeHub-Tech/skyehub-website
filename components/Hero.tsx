@@ -58,7 +58,7 @@ export default function Hero() {
               alt="Hero Illustration"
               fill
               priority
-              className="object-contain"
+              className="object-contain opacity-45"
             />
           </div>
         </div>

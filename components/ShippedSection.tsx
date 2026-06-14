@@ -110,7 +110,7 @@ export default function ShippedSection () {
                 {/* Visual area */}
                 <div className='h-[213px]'>{project.visual}</div>
                 {/* Text content */}
-                <div className='bg-[#FBFBFB] border border-[#D9D9D9] px-5 py-5'>
+                <div className='bg-[#FBFBFB] border -mt-4 lg:mt-0 border-[#D9D9D9] px-5 py-5'>
                   <p className='text-xs font-semibold text-white/50 uppercase tracking-widest mb-1'>
                     {project.category}
                   </p>
