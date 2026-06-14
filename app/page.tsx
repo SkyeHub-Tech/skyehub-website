@@ -4,6 +4,7 @@ import CoreServices from "@/components/CoreServices";
 import HowWeWork from "@/components/HowWeWork";
 import ShippedSection from "@/components/ShippedSection";
 import CtaSection from "@/components/CtaSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HowWeWork />
       <ShippedSection />
       <CtaSection />
+      <Footer />
     </main>
   );
 }

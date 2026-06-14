@@ -1,11 +1,7 @@
 const steps = [
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <rect x="4" y="4" width="20" height="16" rx="2" stroke="#4361EE" strokeWidth="1.5" />
-        <path d="M9 22h10M14 20v2" stroke="#4361EE" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M8 10h12M8 14h8" stroke="#4361EE" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
+      <img src="/systemAudit.svg" alt="system-audit" />
     ),
     title: "System Audit",
     description:
@@ -13,11 +9,7 @@ const steps = [
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <circle cx="14" cy="14" r="10" stroke="#4361EE" strokeWidth="1.5" />
-        <circle cx="14" cy="14" r="4" stroke="#4361EE" strokeWidth="1.5" />
-        <path d="M14 4V8M14 20v4M4 14h4M20 14h4" stroke="#4361EE" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
+     <img src="/infrastructure.svg" alt="infrastructure" />
     ),
     title: "Infrastructure",
     description:
@@ -25,10 +17,7 @@ const steps = [
   },
   {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M6 20L14 8l8 12" stroke="#4361EE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M9 16h10" stroke="#4361EE" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
+      <img src="/scaleUp.svg" alt="scale-up" />
     ),
     title: "Continuous Scale",
     description:
@@ -38,27 +27,27 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section className="bg-gray-950 py-20 relative overflow-hidden">
-      {/* Background dimension watermark */}
+    <section className="bg-gray-950 py-20 relative overflow-hidden" id="work">
+      {/* Background dimension watermark
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="text-gray-800 font-black text-[12vw] tracking-tight select-none opacity-30">
           1440 × 635
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-16">
-          How we build your stack.
+        <h2 className="text-3xl md:text-4xl text-center font-black tracking-tight text-white mb-16">
+          How we engineer the stack.
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">
           {steps.map((step, i) => (
             <div key={i} className="flex flex-col gap-4">
               {/* Icon circle */}
-              <div className="w-14 h-14 rounded-full border border-gray-700 flex items-center justify-center bg-gray-900">
+              <div className="w-24 h-24 rounded-full flex items-center justify-center bg-white mx-auto">
                 {step.icon}
               </div>
-              <h3 className="text-white font-bold text-lg">{step.title}</h3>
+              <h3 className="text-white font-bold text-lg text-center">{step.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
             </div>
           ))}

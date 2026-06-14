@@ -1,6 +1,6 @@
 export default function CoreServices() {
   return (
-    <section className="bg-[#F9F9F9] py-20 border-t border-gray-100">
+    <section className="bg-[#F9F9F9] py-20 border-t border-gray-100" id="services">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-black mb-12">
           Core Services.
