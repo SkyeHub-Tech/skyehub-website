@@ -8,13 +8,40 @@ import 'swiper/css'
 
 const projects = [
   {
-    category: 'MOBILE APP',
-    name: 'Helix Health',
+    category: 'WEBSITE',
+    name: 'Lighter House',
     description:
-      'Designed and implemented a React Native mobile application for chronic illness tracking, integrating EHR APIs and real-time health analytics with offline-first architecture.',
+      'A social care hospitality in the United Kingdom. The website provides a platform for users to learn about the organization, its services, and how to get involved.',
     color: 'bg-gray-900',
     accent: 'bg-blue-600',
-    visual: <img src='/phone.png' alt='phone' />
+    visual: (
+      <div className='w-full h-full bg-slate-900 flex items-center justify-center p-4 overflow-hidden relative group'>
+        <div className='absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-teal-500/20 opacity-60' />
+        
+        {/* Browser Mockup */}
+        <div className='w-full rounded-lg border border-white/10 bg-slate-950/80 shadow-2xl overflow-hidden flex flex-col z-10'>
+          {/* Header */}
+          <div className='flex items-center gap-1.5 px-3 py-2 bg-slate-900/60 border-b border-white/5'>
+            <div className='flex gap-1'>
+              <span className='w-2 h-2 rounded-full bg-[#FF5F56] block opacity-80' />
+              <span className='w-2 h-2 rounded-full bg-[#FFBD2E] block opacity-80' />
+              <span className='w-2 h-2 rounded-full bg-[#27C93F] block opacity-80' />
+            </div>
+            <div className='h-3 w-32 rounded bg-white/5 mx-auto flex items-center justify-center text-[9px] text-white/30 font-mono tracking-wider overflow-hidden'>
+              lighterhouse.co.uk
+            </div>
+          </div>
+          {/* Content */}
+          <div className='relative h-[115px] overflow-hidden bg-white'>
+            <img
+              src='/lighter_house_hero.png'
+              alt='Lighter House Website'
+              className='w-full h-full object-cover object-top'
+            />
+          </div>
+        </div>
+      </div>
+    )
   },
   {
     category: 'WEB APPLICATION',
@@ -111,7 +138,7 @@ export default function ShippedSection () {
                 <div className='h-[213px]'>{project.visual}</div>
                 {/* Text content */}
                 <div className='bg-[#FBFBFB] border -mt-4 lg:mt-0 border-[#D9D9D9] px-5 py-5'>
-                  <p className='text-xs font-semibold text-white/50 uppercase tracking-widest mb-1'>
+                  <p className='text-xs font-bold text-primary uppercase tracking-widest mb-1'>
                     {project.category}
                   </p>
                   <h3 className='text-black font-bold text-lg mb-2'>
