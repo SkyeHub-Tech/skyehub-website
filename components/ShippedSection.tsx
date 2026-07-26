@@ -44,13 +44,17 @@ const projects = [
     )
   },
   {
-    category: 'WEB APPLICATION',
-    name: 'Northwind Bank',
+    category: 'Mobile APPLICATION',
+    name: 'Handees',
     description:
-      'Delivered a customer-facing portal and internal dashboard for a challenger bank. The platform provides real-time transaction visibility and automated compliance reporting.',
+      'Delivered a mobile app designed to seamlessly connect users with skilled, vetted artisans in their areas for all everyday service needs.',
     color: 'bg-blue-600',
     accent: 'bg-blue-400',
-    visual: <img src='/cloud.png' alt='cloud' />
+    visual: (
+      <div className='w-full h-full bg-[#19262f] flex items-center justify-center p-4'>
+        <img src='/handees-mockup-nobg-flood.png' alt='Handees' className='w-full h-full object-contain' />
+      </div>
+    )
   },
   {
     category: 'YOUR PROJECT',
@@ -135,7 +139,7 @@ export default function ShippedSection () {
             <SwiperSlide key={i}>
               <div className={`bg-white rounded-2xl overflow-hidden h-full`}>
                 {/* Visual area */}
-                <div className='h-[213px]'>{project.visual}</div>
+                <div className='h-53.25'>{project.visual}</div>
                 {/* Text content */}
                 <div className='bg-[#FBFBFB] border -mt-4 lg:mt-0 border-[#D9D9D9] px-5 py-5'>
                   <p className='text-xs font-bold text-primary uppercase tracking-widest mb-1'>
