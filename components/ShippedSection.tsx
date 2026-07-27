@@ -15,44 +15,21 @@ const projects = [
     color: 'bg-gray-900',
     accent: 'bg-blue-600',
     visual: (
-      <div className='w-full h-full bg-slate-900 flex items-center justify-center p-4 overflow-hidden relative group'>
-        <div className='absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-teal-500/20 opacity-60' />
-        
-        {/* Browser Mockup */}
-        <div className='w-full rounded-lg border border-white/10 bg-slate-950/80 shadow-2xl overflow-hidden flex flex-col z-10'>
-          {/* Header */}
-          <div className='flex items-center gap-1.5 px-3 py-2 bg-slate-900/60 border-b border-white/5'>
-            <div className='flex gap-1'>
-              <span className='w-2 h-2 rounded-full bg-[#FF5F56] block opacity-80' />
-              <span className='w-2 h-2 rounded-full bg-[#FFBD2E] block opacity-80' />
-              <span className='w-2 h-2 rounded-full bg-[#27C93F] block opacity-80' />
-            </div>
-            <div className='h-3 w-32 rounded bg-white/5 mx-auto flex items-center justify-center text-[9px] text-white/30 font-mono tracking-wider overflow-hidden'>
-              lighterhouse.co.uk
-            </div>
-          </div>
-          {/* Content */}
-          <div className='relative h-[115px] overflow-hidden bg-white'>
-            <img
-              src='/lighter_house_hero.png'
-              alt='Lighter House Website'
-              className='w-full h-full object-cover object-top'
-            />
-          </div>
-        </div>
+      <div className='w-full h-full bg-slate-900 flex items-center justify-center p-0'>
+        <img src='/lighter_house_mockup.png' alt='Lighter House Website' className='w-full h-full object-cover' />
       </div>
     )
   },
   {
-    category: 'Mobile APPLICATION',
+    category: 'MOBILE APPLICATION',
     name: 'Handees',
     description:
       'Delivered a mobile app designed to seamlessly connect users with skilled, vetted artisans in their areas for all everyday service needs.',
     color: 'bg-blue-600',
     accent: 'bg-blue-400',
     visual: (
-      <div className='w-full h-full bg-[#19262f] flex items-center justify-center p-4'>
-        <img src='/handees-mockup-nobg-flood.png' alt='Handees' className='w-full h-full object-contain' />
+      <div className='w-full h-full bg-gray-950 flex items-end justify-center px-4 pt-8'>
+        <img src='/handees-mockup-cropped.png' alt='Handees' className='w-full h-full object-contain object-bottom' />
       </div>
     )
   },
@@ -63,7 +40,7 @@ const projects = [
       'Custom analytics dashboard giving non-technical teams live access to their KPIs. Built in Next.js with a data pipeline that processes millions of events per day.',
     color: 'bg-purple-700',
     accent: 'bg-purple-400',
-    visual: <img src='/phone.png' alt='phone' />
+    visual: <img src='/phone.png' alt='phone' className='w-full h-full object-cover block' />
   },
   {
     category: 'MOBILE APP',
@@ -72,7 +49,7 @@ const projects = [
       'End-to-end supply chain tracking application with barcode scanning, GPS logistics, and real-time fleet visibility. Deployed across 12 distribution centres.',
     color: 'bg-emerald-700',
     accent: 'bg-emerald-400',
-    visual: <img src='/cloud.png' alt='cloud' />
+    visual: <img src='/cloud.png' alt='cloud' className='w-full h-full object-cover block' />
   }
 ]
 
@@ -130,18 +107,18 @@ export default function ShippedSection () {
             640: { slidesPerView: 2.1 },
             1024: { slidesPerView: 3.1 }
           }}
-          className='shipped-swiper'
+          className='shipped-swiper [&_.swiper-wrapper]:items-stretch'
           onSwiper={swiper => {
             swiperRef.current = swiper
           }}
         >
           {projects.map((project, i) => (
-            <SwiperSlide key={i}>
-              <div className={`bg-white rounded-2xl overflow-hidden h-full`}>
+            <SwiperSlide key={i} className="!h-auto">
+              <div className={`bg-white rounded-2xl overflow-hidden h-full flex flex-col`}>
                 {/* Visual area */}
-                <div className='h-53.25'>{project.visual}</div>
+                <div className='h-[213px] w-full shrink-0'>{project.visual}</div>
                 {/* Text content */}
-                <div className='bg-[#FBFBFB] border -mt-4 lg:mt-0 border-[#D9D9D9] px-5 py-5'>
+                <div className='bg-[#FBFBFB] border-x border-b border-[#D9D9D9] px-5 py-5 flex-grow'>
                   <p className='text-xs font-bold text-primary uppercase tracking-widest mb-1'>
                     {project.category}
                   </p>

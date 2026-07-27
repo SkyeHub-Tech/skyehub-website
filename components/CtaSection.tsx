@@ -30,9 +30,9 @@ export default function CtaSection () {
       {/* Watermark */}
       <div className='absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden'>
         <span
-          className='font-black select-none'
+          className='font-black select-none max-w-full text-center truncate md:overflow-visible px-4 md:px-0'
           style={{
-            fontSize: 'clamp(180px, 26vw, 420px)',
+            fontSize: 'clamp(80px, 22vw, 420px)',
             lineHeight: 1,
             color: '#EFEFEF',
             letterSpacing: '-0.08em'
@@ -49,10 +49,10 @@ export default function CtaSection () {
           your infrastructure?
         </h2>
 
-        <p className='mt-8 max-w-[640px] mx-auto text-[18px] leading-[1.6] text-[#9CA3AF]'>
-          Whether you're building a greenfield platform or need an elite
+        <p className='mt-8 max-w-160 mx-auto text-[18px] leading-[1.6] text-[#9CA3AF]'>
+          Whether you&apos;re building a greenfield platform or need an elite
           engineering team to rescue a mission-critical system, SKYEHUB provides
-          the operational execution required to win. Let's secure your tech
+          the operational execution required to win. Let&apos;s secure your tech
           stack.
         </p>
 
@@ -71,7 +71,7 @@ export default function CtaSection () {
               onClick={handleSendEmail}
               className='h-[44px] px-7 rounded-full bg-[#1DA1F2] text-white text-sm font-medium hover:bg-[#0d8de0] transition-all'
             >
-              Send →
+              Send <span className="hidden sm:inline">→</span>
             </button>
           </div>
         </div>
