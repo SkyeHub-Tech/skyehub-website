@@ -8,15 +8,24 @@ import 'swiper/css'
 
 const projects = [
   {
-    category: 'WEBSITE',
-    name: 'Lighter House',
+    category: 'FINTECH PLATFORM',
+    name: 'Credence',
     description:
-      'A social care hospitality in the United Kingdom. The website provides a platform for users to learn about the organization, its services, and how to get involved.',
-    color: 'bg-gray-900',
-    accent: 'bg-blue-600',
+      'An application that connects traders with financiers for their businesses, streamlining trade financing and deal management.',
+    color: 'bg-emerald-900',
+    accent: 'bg-emerald-500',
+    links: [
+      { label: 'Merchant App', url: 'https://merchant.credence54.com' },
+      { label: 'Financier App', url: 'https://financier.credence54.com' }
+    ],
     visual: (
-      <div className='w-full h-full bg-slate-900 flex items-center justify-center p-0'>
-        <img src='/lighter_house_mockup.png' alt='Lighter House Website' className='w-full h-full object-cover' />
+      <div className='w-full h-full bg-[#1a3830] flex items-center justify-center p-0 relative overflow-hidden group'>
+        <img
+          src='/credence_mockup.png'
+          alt='Credence Trade Finance Platform'
+          className='w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105'
+        />
+        <div className='absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none' />
       </div>
     )
   },
@@ -128,6 +137,24 @@ export default function ShippedSection () {
                   <p className='text-black text-xs leading-relaxed'>
                     {project.description}
                   </p>
+                  {'links' in project && project.links && (
+                    <div className='flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-200/60'>
+                      {project.links.map((link, linkIdx) => (
+                        <a
+                          key={linkIdx}
+                          href={link.url}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          className='inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50/80 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/60 rounded-lg px-2.5 py-1 transition-all shadow-xs'
+                        >
+                          <span>{link.label}</span>
+                          <svg width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2.2' strokeLinecap='round' strokeLinejoin='round'>
+                            <path d='M7 17L17 7M17 7H7M17 7V17' />
+                          </svg>
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </SwiperSlide>
